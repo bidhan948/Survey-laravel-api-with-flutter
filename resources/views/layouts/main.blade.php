@@ -38,7 +38,7 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed text-sm">
-    {{-- @include('sweetalert::alert') --}}
+    @include('sweetalert::alert')
     {{-- @livewireStyles --}}
     <div class="wrapper">
 
@@ -120,7 +120,7 @@
                             </a>
                             <ul class="nav nav-treeview" style="display: none;">
                                 <li class="nav-item">
-                                    <a href="" class="nav-link @yield('setting_active')">
+                                    <a href="{{route('gender.index')}}" class="nav-link @yield('setting_gender')">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p class="px-2">{{ __('लिङ्ग') }}</p>
                                     </a>
