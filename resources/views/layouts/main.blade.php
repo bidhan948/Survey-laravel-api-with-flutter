@@ -125,6 +125,12 @@
                                         <p class="px-2">{{ __('लिङ्ग') }}</p>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="{{route('relation.index')}}" class="nav-link @yield('setting_relation')">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p class="px-2">{{ __('नाता') }}</p>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                     </ul>

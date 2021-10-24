@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Setting\GenderController;
+use App\Http\Controllers\Setting\RelationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,9 +21,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::group(['middleware' => 'auth'], function () {
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::prefix('settings')->group(function () {
         Route::resource('gender', GenderController::class);
+        Route::resource('relation', RelationController::class);
     });
 });
